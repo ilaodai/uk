@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #0057B8;
+    --color-secondary: #FFD700;
+    --color-accent: #E74C3C;
+    --color-bg-light: #F8F9FA;
+    --color-bg-dark: #1A1A2E;
+  }
+
+  * {
+    @apply border-slate-200 dark:border-slate-700;
+  }
+
+  body {
+    @apply bg-slate-50 dark:bg-midnight-900 text-slate-900 dark:text-slate-100 font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-ukraine-blue text-white font-semibold rounded-xl
+           hover:bg-blue-700 hover:shadow-lg hover:shadow-ukraine-blue/30
+           active:scale-[0.98] transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-ukraine-yellow text-slate-900 font-semibold rounded-xl
+           hover:bg-yellow-500 hover:shadow-lg hover:shadow-ukraine-yellow/30
+           active:scale-[0.98] transition-all duration-200;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-ukraine-blue text-ukraine-blue font-semibold rounded-xl
+           hover:bg-ukraine-blue hover:text-white
+           active:scale-[0.98] transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white dark:bg-midnight-800 rounded-2xl shadow-md
+           hover:shadow-xl hover:-translate-y-1
+           transition-all duration-300;
+  }
+
+  .card-glass {
+    @apply bg-white/80 dark:bg-midnight-800/80 backdrop-blur-lg
+           rounded-2xl shadow-lg border border-white/20;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-white dark:bg-midnight-800
+           border border-slate-200 dark:border-slate-700 rounded-xl
+           focus:ring-2 focus:ring-ukraine-blue focus:border-transparent
+           transition-all duration-200 outline-none;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 text-sm font-medium rounded-full;
+  }
+
+  .badge-blue {
+    @apply bg-ukraine-blue/10 text-ukraine-blue dark:bg-ukraine-blue/20;
+  }
+
+  .badge-yellow {
+    @apply bg-ukraine-yellow/20 text-amber-700;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-ukraine-blue to-ukraine-yellow bg-clip-text text-transparent;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-sky-50 via-white to-ukraine-yellow/10
+           dark:from-midnight-900 dark:via-midnight-800 dark:to-ukraine-blue/20;
+  }
+
+  .shimmer {
+    @apply bg-gradient-to-r from-transparent via-white/20 to-transparent;
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite linear;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}

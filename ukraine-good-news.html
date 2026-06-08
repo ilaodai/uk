@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇺🇦 近期关于乌克兰的好消息</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2744 50%, #0d1f3c 100%);
+            color: #e8edf5;
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0057b8 0%, #ffd700 100%);
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            font-weight: 800;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1em;
+            color: rgba(255,255,255,0.9);
+            margin-top: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .date {
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.7);
+            margin-top: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+        }
+
+        .summary-box {
+            background: linear-gradient(135deg, rgba(0,87,184,0.15), rgba(255,215,0,0.1));
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin-bottom: 40px;
+        }
+
+        .summary-box h2 {
+            color: #ffd700;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .summary-box p {
+            color: #c8d6e5;
+            font-size: 0.95em;
+        }
+
+        .category {
+            margin-bottom: 40px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(255,215,0,0.2);
+        }
+
+        .category-icon {
+            font-size: 2em;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,215,0,0.1);
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+
+        .category-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #ffd700;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 14px;
+            padding: 22px 26px;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #0057b8, #ffd700);
+            border-radius: 4px 0 0 4px;
+        }
+
+        .card:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,215,0,0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+
+        .card-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #0057b8, #ffd700);
+            color: #fff;
+            font-size: 0.8em;
+            font-weight: 700;
+            border-radius: 50%;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .card h3 {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #fff;
+            flex: 1;
+        }
+
+        .card-body {
+            color: #a8b8cc;
+            font-size: 0.93em;
+            padding-left: 38px;
+        }
+
+        .card-source {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 3px 10px;
+            background: rgba(0,87,184,0.2);
+            border: 1px solid rgba(0,87,184,0.3);
+            border-radius: 20px;
+            font-size: 0.78em;
+            color: #6cb4ee;
+            margin-left: 38px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            background: rgba(255,215,0,0.15);
+            border: 1px solid rgba(255,215,0,0.25);
+            border-radius: 20px;
+            font-size: 0.78em;
+            color: #ffd700;
+            margin-right: 6px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: rgba(255,255,255,0.3);
+            font-size: 0.85em;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.6em;
+            }
+            .card {
+                padding: 16px 18px;
+            }
+            .card-body, .card-source {
+                padding-left: 0;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>🇺🇦 近期关于乌克兰的好消息</h1>
+    <p class="subtitle">来自多个国际媒体的正面进展汇总</p>
+    <p class="date">📅 截至 2026年6月7日</p>
+</div>
+
+<div class="container">
+
+    <div class="summary-box">
+        <h2>📋 核心摘要</h2>
+        <p>近期乌克兰方面的好消息主要集中在：<span class="highlight">无人机作战能力大幅提升</span>（远程打击俄腹地、摧毁战略轰炸机）、<span class="highlight">国际援助持续增加</span>（日本、美国新承诺）、<span class="highlight">战场态势趋于乐观</span>（多方分析认为乌方正在掌握主动权），以及<span class="highlight">和平谈判的积极信号</span>。</p>
+    </div>
+
+    <!-- 军事战果 -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">🎯</div>
+            <div class="category-title">军事战果</div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">1</span>
+                <h3>乌克兰无人机成功打击圣彼得堡</h3>
+            </div>
+            <div class="card-body">
+                乌克兰无人机成功瞄准俄罗斯圣彼得堡，展示了乌军远程打击能力的持续提升。此前普京刚拒绝与泽连斯基举行峰会谈判。
+                <br>
+                <span class="card-tag">最新</span>
+                <span class="card-source">📰 The Independent · 3小时前</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">2</span>
+                <h3>"蜘蛛网行动"重创俄战略轰炸机群</h3>
+            </div>
+            <div class="card-body">
+                乌克兰在2025年6月的"蜘蛛网行动"中，<span class="highlight">一次性摧毁约7架俄罗斯Tu-95战略轰炸机</span>，另损坏2架。俄罗斯无法替换这些Tu-95"熊"式轰炸机，这是对俄军战略核威慑能力的重大打击。
+                <br>
+                <span class="card-tag">重大战果</span>
+                <span class="card-source">📰 National Security Journal · 2026年5月22日</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">3</span>
+                <h3">大规模无人机打击创战争纪录</h3>
+            </div>
+            <div class="card-body">
+                乌克兰对俄罗斯发动了自战争开始以来最大规模的无人机打击之一，无人机碎片落在俄罗斯最大机场附近，展示了乌军前所未有的远程打击纵深能力。
+                <br>
+                <span class="card-source">📰 CBS News / NPR · 2026年5月17日</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">4</span>
+                <h3>精准打击俄境内炼油厂与化肥厂</h3>
+            </div>
+            <div class="card-body">
+                乌克兰无人机深入俄罗斯腹地，成功打击了多家炼油厂和一家与炸药生产相关的大型化肥厂，引发大火和浓烟，严重削弱俄罗斯的战争经济能力。
+                <br>
+                <span class="card-source">📰 AP / Newsweek · 2026年5月21日</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">5</span>
+                <h3>在占领区成功打击俄军</h3>
+            </div>
+            <div class="card-body">
+                乌克兰在俄占领区发动两次精确打击，声称击毙了大量俄军人员，基辅正加剧中程无人机打击，瞄准莫斯科的军事基础设施。
+                <br>
+                <span class="card-source">📰 CNN · 2026年5月21日</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 国际援助与外交 -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">🤝</div>
+            <div class="category-title">国际援助与外交</div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">6</span>
+                <h3>日本通过北约向乌克兰提供超1400万美元军备</h3>
+            </div>
+            <div class="card-body">
+                日本加入了北约购买美制军事装备援助乌克兰的倡议，<span class="highlight">贡献约1470万美元</span>，标志着亚太国家对乌克兰支持持续加码。
+                <br>
+                <span class="card-source">📰 The Kyiv Independent · 约1周前</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">7</span>
+                <h3>乌克兰与美国接近达成 landmark 无人机防御协议</h3>
+            </div>
+            <div class="card-body">
+                美乌两国已起草了一份新的防务合作备忘录，标志着双边安全合作迈上新台阶。伊朗战争凸显了无人机防御的重要性，推动了这一合作。
+                <br>
+                <span class="card-source">📰 CBS News · 2026年5月13日</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">8</span>
+                <h3>五角大楼向乌克兰学习无人机战争经验</h3>
+            </div>
+            <div class="card-body">
+                Forbes 报道称，五角大楼正在从乌克兰的无人机作战经验中学习。乌克兰已成为全球无人机战争的先驱，<span class="highlight">俄军甚至在"抄袭"乌克兰的无人机部队成功模式</span>，俄无人机人员数量在2026年春季已超过10万人。
+                <br>
+                <span class="card-source">📰 Forbes · 2026年5月14-15日</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 战局分析 -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">📈</div>
+            <div class="category-title">战局分析：舆论转向乐观</div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">9</span>
+                <h3>"乌克兰已掌握对俄上风"</h3>
+            </div>
+            <div class="card-body">
+                Newsweek 分析指出，乌克兰不断增强的无人机能力已弥补了美国军事援助减少的影响，<span class="highlight">基辅正在战场上取得上风</span>。
+                <br>
+                <span class="card-tag">深度分析</span>
+                <span class="card-source">📰 Newsweek · 约1周前</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">10</span>
+                <h3>"俄罗斯正在输掉乌克兰战争"</h3>
+            </div>
+            <div class="card-body">
+                The Bulwark 评论文章直言不讳地指出：<span class="highlight">"尽管困难重重，乌克兰实际上正在赢得战争"</span>——"如果在这个历史性时刻放弃，那将是悲剧性和讽刺性的。"
+                <br>
+                <span class="card-tag">评论</span>
+                <span class="card-source">📰 The Bulwark · 3天前</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">11</span>
+                <h3>"战潮是否已转向对俄罗斯不利？"</h3>
+            </div>
+            <div class="card-body">
+                莫斯科时报发文讨论乌克兰近期的战场进展和不断增长的破坏俄军后勤的能力，正在侵蚀莫斯科的战场优势。这一来自俄罗斯媒体自身的分析尤其值得关注。
+                <br>
+                <span class="card-tag">俄媒视角</span>
+                <span class="card-source">📰 The Moscow Times · 2天前</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 和平与重建 -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">🕊️</div>
+            <div class="category-title">和平与重建</div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">12</span>
+                <h3>泽连斯基致信普京呼吁直接谈判</h3>
+            </div>
+            <div class="card-body">
+                泽连斯基发表公开信，指责普京发动了一场"没有真正理由的战争"，并敦促他坐到谈判桌前。这展现了乌克兰寻求和平的主动姿态和外交努力。
+                <br>
+                <span class="card-source">📰 Mint · 2026年6月4日</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">13</span>
+                <h3>乌克兰战后重建前景：全球粮食与钢铁核心回归</h3>
+            </div>
+            <div class="card-body">
+                Forbes 发文探讨乌克兰战后重建前景，重点关注其作为<span class="highlight">全球粮食和钢铁供应核心</span>的回归，为乌克兰经济复苏描绘了积极蓝图。
+                <br>
+                <span class="card-source">📰 Forbes · 2026年5月20日</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>数据来源：Bing News 聚合 · The Independent / Newsweek / Forbes / CBS News / CNN / NPR / The Kyiv Independent / The Bulwark / The Moscow Times 等</p>
+    <p>由 agent-browser 自动搜索并整理 · 2026年6月7日</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,2668 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="德莱蒂雅门窗 - 匠心定制 一生一世 | 高端系统门窗定制品牌</title>
+<meta name="description" data-zh="德莱蒂雅门窗经销有限公司，始建于2006年，主营系统门窗、智能门窗、铝木门窗、阳光房等产品。高端定制，静享生活。" data-en="DELITIYA Door & Window Co., Ltd., founded in 2006, specializes in system doors/windows, smart windows, aluminum-wood windows, and sunrooms. Premium customization for quiet living." content="德莱蒂雅门窗经销有限公司，始建于2006年，主营系统门窗、智能门窗、铝木门窗、阳光房等产品。高端定制，静享生活。">
+<meta name="keywords" data-zh="德莱蒂雅,门窗,系统门窗,高端门窗,隔音门窗,保温门窗,哈尔滨门窗" data-en="DELITIYA, doors, windows, system windows, premium windows, soundproof windows, thermal windows, Harbin windows" content="德莱蒂雅,门窗,系统门窗,高端门窗,隔音门窗,保温门窗,哈尔滨门窗">
+<style>
+/* ============================================
+   CSS Variables & Reset
+   ============================================ */
+:root {
+  --color-primary: #1a1a2e;
+  --color-primary-dark: #0f0f1e;
+  --color-secondary: #16213e;
+  --color-gold: #c9a96e;
+  --color-gold-light: #d4af37;
+  --color-gold-dark: #a8894a;
+  --color-white: #ffffff;
+  --color-off-white: #f5f5f5;
+  --color-light-gray: #e8e8e8;
+  --color-mid-gray: #999999;
+  --color-dark-gray: #333333;
+  --color-text: #2c2c2c;
+  --color-text-light: #666666;
+  --font-title: 'Noto Serif SC', 'Source Han Serif SC', 'SimSun', serif;
+  --font-body: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --transition-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.16);
+  --shadow-gold: 0 4px 20px rgba(201,169,110,0.3);
+  --max-width: 1200px;
+  --nav-height: 80px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: 2.4rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: 4px;
+  position: relative;
+}
+
+.section-subtitle {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  color: var(--color-gold);
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  margin: 20px auto 50px;
+}
+
+.gold-line {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--color-gold);
+  margin: 12px auto 0;
+}
+
+/* Scroll Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity var(--transition-medium), transform var(--transition-medium);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity var(--transition-medium), transform var(--transition-medium);
+}
+
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity var(--transition-medium), transform var(--transition-medium);
+}
+
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity var(--transition-medium), transform var(--transition-medium);
+}
+
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  z-index: 1000;
+  transition: all var(--transition-fast);
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(26, 26, 46, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  height: 64px;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.nav-brand-icon {
+  width: 42px;
+  height: 42px;
+  border: 2px solid var(--color-gold);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-brand-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--color-gold);
+  border-radius: 2px;
+}
+
+.nav-brand-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: var(--color-gold);
+  border-radius: 50%;
+}
+
+.nav-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-brand-name {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  line-height: 1.3;
+}
+
+.nav-brand-en {
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  color: var(--color-gold);
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  position: relative;
+  transition: color var(--transition-fast);
+  padding: 4px 0;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-gold);
+  transition: width var(--transition-fast);
+}
+
+.nav-links a:hover {
+  color: var(--color-gold);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-phone {
+  color: var(--color-gold);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-phone::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid var(--color-gold);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: inline-block;
+}
+
+/* Mobile Menu */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--color-white);
+  transition: all var(--transition-fast);
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--color-primary);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* CSS gradient simulating a luxury window view */
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(22, 33, 62, 0.9) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(26, 26, 46, 0.9) 0%, transparent 60%),
+    linear-gradient(180deg, #0a0a1a 0%, #1a1a2e 30%, #16213e 60%, #1a1a2e 100%);
+}
+
+/* Window frame effect */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    /* Vertical mullion */
+    linear-gradient(90deg, transparent 49.5%, rgba(201,169,110,0.08) 49.5%, rgba(201,169,110,0.08) 50.5%, transparent 50.5%),
+    /* Horizontal mullion */
+    linear-gradient(0deg, transparent 49.5%, rgba(201,169,110,0.08) 49.5%, rgba(201,169,110,0.08) 50.5%, transparent 50.5%),
+    /* Frame border */
+    linear-gradient(90deg, rgba(201,169,110,0.15), transparent 5%, transparent 95%, rgba(201,169,110,0.15)),
+    linear-gradient(0deg, rgba(201,169,110,0.15), transparent 5%, transparent 95%, rgba(201,169,110,0.15));
+  opacity: 0.6;
+}
+
+/* Light rays from window */
+.hero-light {
+  position: absolute;
+  top: -20%;
+  right: 10%;
+  width: 500px;
+  height: 800px;
+  background: radial-gradient(ellipse at center, rgba(201,169,110,0.06) 0%, transparent 70%);
+  transform: rotate(-15deg);
+  z-index: 2;
+  animation: lightPulse 8s ease-in-out infinite;
+}
+
+@keyframes lightPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(201,169,110,0.3);
+  border-radius: 50%;
+  animation: particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: var(--color-white);
+  max-width: 800px;
+  padding: 0 40px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 24px;
+  border: 1px solid rgba(201,169,110,0.3);
+  border-radius: 30px;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  color: var(--color-gold);
+  margin-bottom: 40px;
+  backdrop-filter: blur(10px);
+  background: rgba(201,169,110,0.05);
+}
+
+.hero-badge::before,
+.hero-badge::after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: var(--color-gold);
+  border-radius: 50%;
+}
+
+.hero-title {
+  font-family: var(--font-title);
+  font-size: 3.8rem;
+  letter-spacing: 12px;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.hero-title-gold {
+  color: var(--color-gold);
+}
+
+.hero-slogan {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  letter-spacing: 10px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 40px;
+  background: transparent;
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  animation: scrollBounce 2s ease-in-out infinite;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(201,169,110,0.6), transparent);
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ============================================
+   Core Features Bar
+   ============================================ */
+.features-bar {
+  position: relative;
+  z-index: 10;
+  margin-top: -60px;
+}
+
+.features-bar .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.feature-item {
+  padding: 40px 30px;
+  text-align: center;
+  border-right: 1px solid var(--color-light-gray);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.feature-item:last-child {
+  border-right: none;
+}
+
+.feature-item:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.feature-item:hover .feature-icon {
+  background: rgba(201,169,110,0.15);
+  border-color: var(--color-gold);
+}
+
+.feature-item:hover .feature-icon svg {
+  stroke: var(--color-gold);
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  border: 1.5px solid var(--color-light-gray);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.feature-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--color-primary);
+  fill: none;
+  stroke-width: 1.5;
+  transition: stroke var(--transition-fast);
+}
+
+.feature-name {
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.feature-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  transition: color var(--transition-fast);
+}
+
+.feature-item:hover .feature-desc {
+  color: rgba(255,255,255,0.7);
+}
+
+/* ============================================
+   About / Brand Story Section
+   ============================================ */
+.about {
+  background: var(--color-off-white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-visual {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background:
+    linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* Simulated factory/workshop image with CSS */
+.about-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    /* Window grid pattern */
+    repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(201,169,110,0.1) 80px, rgba(201,169,110,0.1) 82px),
+    repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(201,169,110,0.1) 60px, rgba(201,169,110,0.1) 62px);
+}
+
+.about-image::after {
+  content: '2006';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-title);
+  font-size: 6rem;
+  color: rgba(201,169,110,0.12);
+  letter-spacing: 8px;
+  font-weight: 300;
+}
+
+.about-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(26,26,46,0.9), transparent);
+  color: var(--color-white);
+}
+
+.about-image-overlay span {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  letter-spacing: 4px;
+  color: var(--color-gold);
+}
+
+.about-frame {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 100px;
+  height: 100px;
+  border-top: 2px solid var(--color-gold);
+  border-right: 2px solid var(--color-gold);
+}
+
+.about-content {
+  padding: 20px 0;
+}
+
+.about-label {
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.about-heading {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  color: var(--color-primary);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+}
+
+.about-text {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 2;
+  margin-bottom: 36px;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px 10px;
+  border: 1px solid var(--color-light-gray);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+.stat-item:hover {
+  border-color: var(--color-gold);
+  background: rgba(201,169,110,0.03);
+}
+
+.stat-number {
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  color: var(--color-gold);
+  display: block;
+  line-height: 1.2;
+}
+
+.stat-unit {
+  font-size: 0.85rem;
+  color: var(--color-gold);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+/* ============================================
+   Products Section
+   ============================================ */
+.products {
+  background: var(--color-white);
+  position: relative;
+}
+
+.products::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-light-gray), transparent);
+}
+
+.product-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.product-tab {
+  padding: 10px 28px;
+  border: 1px solid var(--color-light-gray);
+  background: transparent;
+  font-family: var(--font-title);
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  letter-spacing: 2px;
+  border-radius: 2px;
+}
+
+.product-tab:hover,
+.product-tab.active {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  background: rgba(201,169,110,0.05);
+}
+
+.product-series {
+  display: none;
+}
+
+.product-series.active {
+  display: block;
+}
+
+.series-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.series-name {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+
+.series-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  letter-spacing: 1px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-light-gray);
+  border-radius: 2px;
+  overflow: hidden;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-gold);
+}
+
+.product-card-image {
+  aspect-ratio: 4/3;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Different gradient styles per series */
+.product-card[data-series="glory"] .product-card-image {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d2d4e 50%, #1a1a2e 100%);
+}
+
+.product-card[data-series="supreme"] .product-card-image {
+  background: linear-gradient(135deg, #16213e 0%, #0f3460 50%, #16213e 100%);
+}
+
+.product-card[data-series="phantom"] .product-card-image {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2a2a4e 50%, #16213e 100%);
+}
+
+.product-card[data-series="earl"] .product-card-image {
+  background: linear-gradient(135deg, #2d2d4e 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+.product-card[data-series="luxury"] .product-card-image {
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 50%, #2d2d4e 100%);
+}
+
+.product-card[data-series="fashion"] .product-card-image {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #2d2d4e 100%);
+}
+
+/* Window frame overlay on product card */
+.product-card-image::before {
+  content: '';
+  position: absolute;
+  inset: 15%;
+  border: 1.5px solid rgba(201,169,110,0.2);
+  border-radius: 1px;
+}
+
+.product-card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 49.3%, rgba(201,169,110,0.12) 49.3%, rgba(201,169,110,0.12) 50.7%, transparent 50.7%),
+    linear-gradient(0deg, transparent 49.3%, rgba(201,169,110,0.12) 49.3%, rgba(201,169,110,0.12) 50.7%, transparent 50.7%);
+}
+
+.product-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 12px;
+  background: rgba(201,169,110,0.9);
+  color: var(--color-primary);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.product-card-body {
+  padding: 24px;
+}
+
+.product-card-name {
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.product-card-specs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.spec-tag {
+  padding: 4px 10px;
+  background: var(--color-off-white);
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  letter-spacing: 1px;
+  border-radius: 2px;
+}
+
+/* ============================================
+   Technology / Advantages Section
+   ============================================ */
+.technology {
+  background: var(--color-primary);
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.technology::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(201,169,110,0.04) 0%, transparent 70%);
+}
+
+.technology .section-title {
+  color: var(--color-white);
+}
+
+.technology .section-subtitle {
+  color: var(--color-gold);
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.tech-item {
+  text-align: center;
+  padding: 40px 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transition: transform var(--transition-fast);
+}
+
+.tech-item:hover::before {
+  transform: scaleX(1);
+}
+
+.tech-item:hover {
+  border-color: rgba(201,169,110,0.3);
+  background: rgba(201,169,110,0.03);
+  transform: translateY(-4px);
+}
+
+.tech-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border: 1.5px solid rgba(201,169,110,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--color-gold);
+}
+
+.tech-name {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.tech-desc {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+}
+
+/* Performance Metrics */
+.performance {
+  background: var(--color-secondary);
+  padding: 60px 0;
+}
+
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.perf-item {
+  text-align: center;
+  padding: 30px 15px;
+  position: relative;
+}
+
+.perf-item::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+.perf-item:last-child::after {
+  display: none;
+}
+
+.perf-ring {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 16px;
+  position: relative;
+}
+
+.perf-ring svg {
+  width: 80px;
+  height: 80px;
+  transform: rotate(-90deg);
+}
+
+.perf-ring circle {
+  fill: none;
+  stroke-width: 3;
+}
+
+.perf-ring .ring-bg {
+  stroke: rgba(255,255,255,0.08);
+}
+
+.perf-ring .ring-fill {
+  stroke: var(--color-gold);
+  stroke-linecap: round;
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  transition: stroke-dashoffset 1.5s ease;
+}
+
+.perf-ring.revealed .ring-fill {
+  stroke-dashoffset: var(--offset);
+}
+
+.perf-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  color: var(--color-gold);
+}
+
+.perf-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 2px;
+}
+
+/* ============================================
+   Honors Section
+   ============================================ */
+.honors {
+  background: var(--color-off-white);
+}
+
+.honors-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.honor-card {
+  background: var(--color-white);
+  padding: 30px 20px;
+  text-align: center;
+  border: 1px solid var(--color-light-gray);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.honor-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-gold), var(--color-gold-light));
+  transform: scaleX(0);
+  transition: transform var(--transition-fast);
+}
+
+.honor-card:hover::before {
+  transform: scaleX(1);
+}
+
+.honor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.honor-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  position: relative;
+}
+
+.honor-icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid var(--color-gold);
+  border-radius: 50%;
+}
+
+.honor-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 14px solid var(--color-gold);
+}
+
+.honor-name {
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+/* ============================================
+   CTA Section
+   ============================================ */
+.cta-section {
+  position: relative;
+  padding: 120px 0;
+  background: var(--color-primary);
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(201,169,110,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 50%, rgba(201,169,110,0.06) 0%, transparent 50%);
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.cta-heading {
+  font-family: var(--font-title);
+  font-size: 2.2rem;
+  letter-spacing: 6px;
+  margin-bottom: 16px;
+}
+
+.cta-text {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+  background: var(--color-primary-dark);
+  color: rgba(255,255,255,0.6);
+  padding: 80px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-brand {
+  max-width: 300px;
+}
+
+.footer-brand-name {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  color: var(--color-white);
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+
+.footer-brand-en {
+  font-size: 0.7rem;
+  color: var(--color-gold);
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.footer-brand-desc {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: all var(--transition-fast);
+}
+
+.footer-social a:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.footer-column h4 {
+  font-family: var(--font-title);
+  font-size: 0.95rem;
+  color: var(--color-white);
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer-column h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--color-gold);
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color var(--transition-fast);
+  letter-spacing: 1px;
+}
+
+.footer-column ul li a:hover {
+  color: var(--color-gold);
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.footer-contact-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(201,169,110,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-gold);
+  font-size: 0.75rem;
+}
+
+.footer-contact-text {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.footer-contact-text strong {
+  color: var(--color-white);
+  display: block;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+.footer-bottom {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-bottom a {
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-bottom a:hover {
+  color: var(--color-gold);
+}
+
+/* ============================================
+   Back to Top
+   ============================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 44px;
+  height: 44px;
+  background: var(--color-primary);
+  border: 1px solid rgba(201,169,110,0.3);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  z-index: 999;
+  border-radius: 2px;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background: var(--color-gold);
+  color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .honors-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .performance-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 64px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .section-padding {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(26, 26, 46, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    transition: right var(--transition-fast);
+    padding: 20px;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+
+  .nav-phone {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    letter-spacing: 6px;
+  }
+
+  .hero-slogan {
+    font-size: 1rem;
+    letter-spacing: 6px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-bar .container {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-item {
+    border-right: none;
+    border-bottom: 1px solid var(--color-light-gray);
+  }
+
+  .feature-item:last-child {
+    border-bottom: none;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-tabs {
+    gap: 6px;
+  }
+
+  .product-tab {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .perf-item:nth-child(3)::after {
+    display: none;
+  }
+
+  .honors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-heading {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat-number {
+    font-size: 1.4rem;
+  }
+
+  .performance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .perf-item::after {
+    display: none;
+  }
+
+  .honors-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   Animations & Transitions
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content > * {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-content > *:nth-child(1) { animation-delay: 0.2s; }
+.hero-content > *:nth-child(2) { animation-delay: 0.4s; }
+.hero-content > *:nth-child(3) { animation-delay: 0.6s; }
+.hero-content > *:nth-child(4) { animation-delay: 0.8s; }
+
+/* Mobile nav overlay */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+}
+
+.nav-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Counter animation */
+.count-up {
+  display: inline-block;
+}
+
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255,255,255,0.2);
+}
+
+.lang-switcher button {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.7);
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 3px;
+  font-family: var(--font-body);
+}
+
+.lang-switcher button:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.lang-switcher button.active {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-primary);
+}
+
+.navbar.scrolled .lang-switcher button {
+  border-color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.7);
+}
+
+.navbar.scrolled .lang-switcher button.active {
+  background: var(--color-gold);
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+  .lang-switcher button {
+    padding: 3px 8px;
+    font-size: 0.75rem;
+  }
+}
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============================================
+     Navigation
+     ============================================ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="#" class="nav-brand">
+      <div class="nav-brand-icon"></div>
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">德莱蒂雅</span>
+        <span class="nav-brand-en">DELITIYA</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" onclick="closeNav()">品牌故事</a></li>
+      <li><a href="#products" onclick="closeNav()">产品系列</a></li>
+      <li><a href="#technology" onclick="closeNav()">技术优势</a></li>
+      <li><a href="#honors" onclick="closeNav()">荣誉资质</a></li>
+      <li><a href="#contact" onclick="closeNav()">联系我们</a></li>
+    </ul>
+    <span class="nav-phone">182-6245-56XX</span>
+    <div class="nav-toggle" id="navToggle" onclick="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="closeNav()"></div>
+
+<!-- ============================================
+     Hero Section
+     ============================================ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-light"></div>
+  <div class="hero-particles" id="particles"></div>
+  <div class="hero-content">
+    <div class="hero-badge">SINCE 2006 &middot; 哈尔滨制造</div>
+    <h1 class="hero-title">
+      德莱蒂雅<span class="hero-title-gold">门窗</span>
+    </h1>
+    <p class="hero-slogan">匠心定制 &nbsp; 一生一世</p>
+    <div class="hero-cta">
+      <a href="#products" class="btn-primary">探索产品系列</a>
+      <a href="#about" class="btn-outline">了解品牌故事</a>
+    </div>
+  </div>
+  <a href="#features" class="hero-scroll">
+    <span>SCROLL</span>
+    <div class="hero-scroll-line"></div>
+  </a>
+</section>
+
+<!-- ============================================
+     Core Features Bar
+     ============================================ -->
+<section class="features-bar" id="features">
+  <div class="container">
+    <div class="feature-item reveal">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+      </div>
+      <div class="feature-name">超强防水</div>
+      <div class="feature-desc">多道密封设计，水密性能最高8级</div>
+    </div>
+    <div class="feature-item reveal" style="transition-delay: 0.1s">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+      </div>
+      <div class="feature-name">隔音降噪</div>
+      <div class="feature-desc">三层中空玻璃，隔音性能最高6级</div>
+    </div>
+    <div class="feature-item reveal" style="transition-delay: 0.2s">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+      </div>
+      <div class="feature-name">保温阻冷</div>
+      <div class="feature-desc">PA66尼龙多腔体间隔条，保温最高10级</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     About / Brand Story
+     ============================================ -->
+<section class="about section-padding" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal-left">
+        <div class="about-image">
+          <div class="about-image-overlay">
+            <span>始于2006 &middot; 匠心传承</span>
+          </div>
+        </div>
+        <div class="about-frame"></div>
+      </div>
+      <div class="about-content reveal-right">
+        <div class="about-label">Brand Story</div>
+        <h2 class="about-heading">二十年匠心沉淀<br>铸就高端门窗品质</h2>
+        <p class="about-text">
+          德莱蒂雅门窗经销有限公司始建于2006年，主营德莱蒂雅系统门窗、智能门窗、铝木门窗、阳光房等产品，是从研发、设计、制作、销售、安装、售后为一体的大型门窗企业。
+        </p>
+        <p class="about-text">
+          公司投资千万元人民币，在哈尔滨市香坊区拥有现代化厂房超5万平米，先后引进德国先进的门窗生产设备、技术及制造工艺，年生产能力30万平米。现有员工200余名，其中高级工程师7人，工程师12人，技术工程人员23人。
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number"><span class="count-up" data-target="18">0</span></span>
+            <span class="stat-label">年行业深耕</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number"><span class="count-up" data-target="50000">0</span><span class="stat-unit">m&sup2;</span></span>
+            <span class="stat-label">现代化厂房</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number"><span class="count-up" data-target="300000">0</span><span class="stat-unit">m&sup2;</span></span>
+            <span class="stat-label">年生产能力</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number"><span class="count-up" data-target="200">0</span><span class="stat-unit">+</span></span>
+            <span class="stat-label">专业员工</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     Products Section
+     ============================================ -->
+<section class="products section-padding" id="products">
+  <div class="container">
+    <h2 class="section-title reveal">产品系列</h2>
+    <p class="section-subtitle reveal">PRODUCT SERIES</p>
+    <div class="section-divider reveal"></div>
+
+    <div class="product-tabs reveal">
+      <button class="product-tab active" onclick="switchSeries('glory', this)">荣耀系列</button>
+      <button class="product-tab" onclick="switchSeries('supreme', this)">至尊系列</button>
+      <button class="product-tab" onclick="switchSeries('phantom', this)">幻影系列</button>
+      <button class="product-tab" onclick="switchSeries('earl', this)">伯爵系列</button>
+      <button class="product-tab" onclick="switchSeries('luxury', this)">轻奢系列</button>
+      <button class="product-tab" onclick="switchSeries('fashion', this)">致尚系列</button>
+    </div>
+
+    <!-- Glory Series -->
+    <div class="product-series active" id="series-glory">
+      <div class="series-header reveal">
+        <h3 class="series-name">荣耀系列 &middot; 铝合金窗纱一体</h3>
+        <p class="series-desc">6063-T5航空级铝材 &middot; 壁厚1.8mm &middot; 集成防盗窗纱</p>
+      </div>
+      <div class="product-grid">
+        <div class="product-card reveal" data-series="glory">
+          <div class="product-card-image">
+            <span class="product-card-badge">窗纱一体</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-荣耀108窗纱一体系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.8mm</span>
+              <span class="spec-tag">108系列</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal" data-series="glory" style="transition-delay:0.1s">
+          <div class="product-card-image">
+            <span class="product-card-badge">窗纱一体</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-荣耀95窗纱一体系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.8mm</span>
+              <span class="spec-tag">95系列</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal" data-series="glory" style="transition-delay:0.2s">
+          <div class="product-card-image">
+            <span class="product-card-badge">平齐设计</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-荣耀85平齐系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.8mm</span>
+              <span class="spec-tag">85系列</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal" data-series="glory" style="transition-delay:0.3s">
+          <div class="product-card-image">
+            <span class="product-card-badge">经典款</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-荣耀80系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.8mm</span>
+              <span class="spec-tag">80系列</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Supreme Series -->
+    <div class="product-series" id="series-supreme">
+      <div class="series-header reveal">
+        <h3 class="series-name">至尊系列 &middot; U-PVC塑钢</h3>
+        <p class="series-desc">U-PVC高品质塑钢 &middot; 壁厚3.0mm &middot; 卓越保温隔音</p>
+      </div>
+      <div class="product-grid">
+        <div class="product-card reveal" data-series="supreme">
+          <div class="product-card-image">
+            <span class="product-card-badge">U-PVC</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-至尊95系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">U-PVC</span>
+              <span class="spec-tag">壁厚3.0mm</span>
+              <span class="spec-tag">95系列</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal" data-series="supreme" style="transition-delay:0.1s">
+          <div class="product-card-image">
+            <span class="product-card-badge">U-PVC</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-至尊90系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">U-PVC</span>
+              <span class="spec-tag">壁厚3.0mm</span>
+              <span class="spec-tag">90系列</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal" data-series="supreme" style="transition-delay:0.2s">
+          <div class="product-card-image">
+            <span class="product-card-badge">U-PVC</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-至尊80系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">U-PVC</span>
+              <span class="spec-tag">壁厚3.0mm</span>
+              <span class="spec-tag">80系列</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal" data-series="supreme" style="transition-delay:0.3s">
+          <div class="product-card-image">
+            <span class="product-card-badge">U-PVC</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-至尊70系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">U-PVC</span>
+              <span class="spec-tag">壁厚3.0mm</span>
+              <span class="spec-tag">70系列</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phantom Series -->
+    <div class="product-series" id="series-phantom">
+      <div class="series-header reveal">
+        <h3 class="series-name">幻影系列 &middot; 铝合金平齐</h3>
+        <p class="series-desc">6063-T5航空级铝材 &middot; 壁厚1.4mm &middot; 极简平齐设计</p>
+      </div>
+      <div class="product-grid">
+        <div class="product-card reveal" data-series="phantom">
+          <div class="product-card-image">
+            <span class="product-card-badge">平齐设计</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-幻影95平齐系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.4mm</span>
+              <span class="spec-tag">95系列</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal" data-series="phantom" style="transition-delay:0.1s">
+          <div class="product-card-image">
+            <span class="product-card-badge">平齐设计</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-幻影85平齐系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.4mm</span>
+              <span class="spec-tag">85系列</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal" data-series="phantom" style="transition-delay:0.2s">
+          <div class="product-card-image">
+            <span class="product-card-badge">经典款</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-幻影75系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.4mm</span>
+              <span class="spec-tag">75系列</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Earl Series -->
+    <div class="product-series" id="series-earl">
+      <div class="series-header reveal">
+        <h3 class="series-name">伯爵系列 &middot; 铝合金</h3>
+        <p class="series-desc">6063-T5航空级铝材 &middot; 壁厚1.4mm &middot; 经典铝合金门窗</p>
+      </div>
+      <div class="product-grid">
+        <div class="product-card reveal" data-series="earl">
+          <div class="product-card-image">
+            <span class="product-card-badge">铝合金</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-伯爵85系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.4mm</span>
+              <span class="spec-tag">85系列</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal" data-series="earl" style="transition-delay:0.1s">
+          <div class="product-card-image">
+            <span class="product-card-badge">铝合金</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-伯爵75系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.4mm</span>
+              <span class="spec-tag">75系列</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Luxury Series -->
+    <div class="product-series" id="series-luxury">
+      <div class="series-header reveal">
+        <h3 class="series-name">轻奢系列 &middot; 铝合金门</h3>
+        <p class="series-desc">6063-T5航空级铝材 &middot; 壁厚1.2-1.5mm &middot; 轻奢风格门类</p>
+      </div>
+      <div class="product-grid">
+        <div class="product-card reveal" data-series="luxury">
+          <div class="product-card-image">
+            <span class="product-card-badge">门类</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-轻奢90系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.5mm</span>
+              <span class="spec-tag">90系列</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal" data-series="luxury" style="transition-delay:0.1s">
+          <div class="product-card-image">
+            <span class="product-card-badge">门类</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-轻奢82系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.5mm</span>
+              <span class="spec-tag">82系列</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal" data-series="luxury" style="transition-delay:0.2s">
+          <div class="product-card-image">
+            <span class="product-card-badge">门类</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-轻奢80系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.2mm</span>
+              <span class="spec-tag">80系列</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fashion Series -->
+    <div class="product-series" id="series-fashion">
+      <div class="series-header reveal">
+        <h3 class="series-name">致尚系列 &middot; 铝合金</h3>
+        <p class="series-desc">6063-T5航空级铝材 &middot; 壁厚1.4mm &middot; 时尚致尚设计</p>
+      </div>
+      <div class="product-grid">
+        <div class="product-card reveal" data-series="fashion">
+          <div class="product-card-image">
+            <span class="product-card-badge">铝合金</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-致尚85系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.4mm</span>
+              <span class="spec-tag">85系列</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal" data-series="fashion" style="transition-delay:0.1s">
+          <div class="product-card-image">
+            <span class="product-card-badge">铝合金</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-致尚75系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.4mm</span>
+              <span class="spec-tag">75系列</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal" data-series="fashion" style="transition-delay:0.2s">
+          <div class="product-card-image">
+            <span class="product-card-badge">铝合金</span>
+          </div>
+          <div class="product-card-body">
+            <h4 class="product-card-name">LD-致尚72系列</h4>
+            <div class="product-card-specs">
+              <span class="spec-tag">6063-T5</span>
+              <span class="spec-tag">壁厚1.4mm</span>
+              <span class="spec-tag">72系列</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     Technology / Advantages Section
+     ============================================ -->
+<section class="technology section-padding" id="technology">
+  <div class="container">
+    <h2 class="section-title reveal">技术优势</h2>
+    <p class="section-subtitle">TECHNOLOGY</p>
+    <div class="section-divider reveal"></div>
+
+    <div class="tech-grid">
+      <div class="tech-item reveal">
+        <div class="tech-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="tech-name">航空级铝材</div>
+        <div class="tech-desc">采用6063-T5航空级铝合金，强度高、耐腐蚀、不变形</div>
+      </div>
+      <div class="tech-item reveal" style="transition-delay:0.1s">
+        <div class="tech-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 3v18"/></svg>
+        </div>
+        <div class="tech-name">三层中空玻璃</div>
+        <div class="tech-desc">三层中空钢化玻璃结构，隔音保温效果卓越</div>
+      </div>
+      <div class="tech-item reveal" style="transition-delay:0.2s">
+        <div class="tech-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </div>
+        <div class="tech-name">进口五金配件</div>
+        <div class="tech-desc">好博/诺托/雷沃等国际品牌五金，经久耐用</div>
+      </div>
+      <div class="tech-item reveal" style="transition-delay:0.3s">
+        <div class="tech-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="tech-name">多道密封设计</div>
+        <div class="tech-desc">EPDM发泡胶条多道密封，有效隔绝风雨和噪音</div>
+      </div>
+      <div class="tech-item reveal" style="transition-delay:0.4s">
+        <div class="tech-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="tech-name">螺钉+注胶+焊接</div>
+        <div class="tech-desc">螺钉工艺、注胶工艺与无缝焊接三重加固</div>
+      </div>
+      <div class="tech-item reveal" style="transition-delay:0.5s">
+        <div class="tech-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg>
+        </div>
+        <div class="tech-name">PA66尼龙间隔条</div>
+        <div class="tech-desc">PA66尼龙多腔体间隔条，阻断冷热传导</div>
+      </div>
+      <div class="tech-item reveal" style="transition-delay:0.6s">
+        <div class="tech-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <div class="tech-name">EPDM发泡胶条</div>
+        <div class="tech-desc">高品质EPDM发泡胶条，耐候性强，密封持久</div>
+      </div>
+      <div class="tech-item reveal" style="transition-delay:0.7s">
+        <div class="tech-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <div class="tech-name">304不锈钢防盗纱</div>
+        <div class="tech-desc">304不锈钢防盗窗纱，安全防护与通风兼顾</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     Performance Metrics
+     ============================================ -->
+<section class="performance">
+  <div class="container">
+    <div class="performance-grid">
+      <div class="perf-item reveal">
+        <div class="perf-ring" data-level="10" data-max="10">
+          <svg viewBox="0 0 80 80">
+            <circle class="ring-bg" cx="40" cy="40" r="35"/>
+            <circle class="ring-fill" cx="40" cy="40" r="35" style="--offset: 0"/>
+          </svg>
+          <span class="perf-value">10</span>
+        </div>
+        <div class="perf-label">保温性能</div>
+      </div>
+      <div class="perf-item reveal" style="transition-delay:0.1s">
+        <div class="perf-ring" data-level="6" data-max="10">
+          <svg viewBox="0 0 80 80">
+            <circle class="ring-bg" cx="40" cy="40" r="35"/>
+            <circle class="ring-fill" cx="40" cy="40" r="35" style="--offset: 88"/>
+          </svg>
+          <span class="perf-value">6</span>
+        </div>
+        <div class="perf-label">隔音性能</div>
+      </div>
+      <div class="perf-item reveal" style="transition-delay:0.2s">
+        <div class="perf-ring" data-level="9" data-max="10">
+          <svg viewBox="0 0 80 80">
+            <circle class="ring-bg" cx="40" cy="40" r="35"/>
+            <circle class="ring-fill" cx="40" cy="40" r="35" style="--offset: 22"/>
+          </svg>
+          <span class="perf-value">9</span>
+        </div>
+        <div class="perf-label">抗风性能</div>
+      </div>
+      <div class="perf-item reveal" style="transition-delay:0.3s">
+        <div class="perf-ring" data-level="8" data-max="10">
+          <svg viewBox="0 0 80 80">
+            <circle class="ring-bg" cx="40" cy="40" r="35"/>
+            <circle class="ring-fill" cx="40" cy="40" r="35" style="--offset: 44"/>
+          </svg>
+          <span class="perf-value">8</span>
+        </div>
+        <div class="perf-label">气密性能</div>
+      </div>
+      <div class="perf-item reveal" style="transition-delay:0.4s">
+        <div class="perf-ring" data-level="8" data-max="10">
+          <svg viewBox="0 0 80 80">
+            <circle class="ring-bg" cx="40" cy="40" r="35"/>
+            <circle class="ring-fill" cx="40" cy="40" r="35" style="--offset: 44"/>
+          </svg>
+          <span class="perf-value">8</span>
+        </div>
+        <div class="perf-label">水密性能</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     Honors Section
+     ============================================ -->
+<section class="honors section-padding" id="honors">
+  <div class="container">
+    <h2 class="section-title reveal">荣誉资质</h2>
+    <p class="section-subtitle">HONORS</p>
+    <div class="section-divider reveal"></div>
+
+    <div class="honors-grid">
+      <div class="honor-card reveal">
+        <div class="honor-icon"></div>
+        <div class="honor-name">质量管理体系<br>认证证书</div>
+      </div>
+      <div class="honor-card reveal" style="transition-delay:0.05s">
+        <div class="honor-icon"></div>
+        <div class="honor-name">环境管理体系<br>认证证书</div>
+      </div>
+      <div class="honor-card reveal" style="transition-delay:0.1s">
+        <div class="honor-icon"></div>
+        <div class="honor-name">职业健康安全<br>管理体系认证</div>
+      </div>
+      <div class="honor-card reveal" style="transition-delay:0.15s">
+        <div class="honor-icon"></div>
+        <div class="honor-name">黑龙江省<br>著名商标</div>
+      </div>
+      <div class="honor-card reveal" style="transition-delay:0.2s">
+        <div class="honor-icon"></div>
+        <div class="honor-name">信用企业<br>荣誉称号</div>
+      </div>
+      <div class="honor-card reveal" style="transition-delay:0.25s">
+        <div class="honor-icon"></div>
+        <div class="honor-name">哈尔滨市新型<br>墙体材料</div>
+      </div>
+      <div class="honor-card reveal" style="transition-delay:0.3s">
+        <div class="honor-icon"></div>
+        <div class="honor-name">黑龙江省节能<br>技术产品认证</div>
+      </div>
+      <div class="honor-card reveal" style="transition-delay:0.35s">
+        <div class="honor-icon"></div>
+        <div class="honor-name">国家节能<br>产品证书</div>
+      </div>
+      <div class="honor-card reveal" style="transition-delay:0.4s">
+        <div class="honor-icon"></div>
+        <div class="honor-name">国家新型产品<br>专利证书</div>
+      </div>
+      <div class="honor-card reveal" style="transition-delay:0.45s">
+        <div class="honor-icon"></div>
+        <div class="honor-name">中国节能门窗<br>十大品牌</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CTA Section
+     ============================================ -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <div class="cta-content reveal">
+      <h2 class="cta-heading">高端定制 &middot; 静享生活</h2>
+      <p class="cta-text">为每一位客户量身定制专属门窗解决方案</p>
+      <div class="cta-buttons">
+        <a href="tel:182624556XX" class="btn-primary">立即咨询：182-6245-56XX</a>
+        <a href="#products" class="btn-outline">浏览产品系列</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     Footer
+     ============================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">德莱蒂雅门窗</div>
+        <div class="footer-brand-en">DELITIYA WINDOWS & DOORS</div>
+        <p class="footer-brand-desc">
+          始建于2006年，专注高端系统门窗定制。从研发、设计、制作、销售、安装到售后，为您提供一站式门窗解决方案。
+        </p>
+        <div class="footer-social">
+          <a href="#" title="微信">WX</a>
+          <a href="#" title="微博">WB</a>
+          <a href="#" title="抖音">DY</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>产品系列</h4>
+        <ul>
+          <li><a href="#products">荣耀系列</a></li>
+          <li><a href="#products">至尊系列</a></li>
+          <li><a href="#products">幻影系列</a></li>
+          <li><a href="#products">伯爵系列</a></li>
+          <li><a href="#products">轻奢系列</a></li>
+          <li><a href="#products">致尚系列</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>快速导航</h4>
+        <ul>
+          <li><a href="#about">品牌故事</a></li>
+          <li><a href="#technology">技术优势</a></li>
+          <li><a href="#honors">荣誉资质</a></li>
+          <li><a href="#contact">联系我们</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>联系方式</h4>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">&#9742;</div>
+          <div class="footer-contact-text">
+            <strong>咨询热线</strong>
+            182-6245-56XX
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">&#9906;</div>
+          <div class="footer-contact-text">
+            <strong>公司地址</strong>
+            黑龙江省哈尔滨市香坊区
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">&#9993;</div>
+          <div class="footer-contact-text">
+            <strong>经营时间</strong>
+            周一至周日 8:00 - 18:00
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2024 德莱蒂雅门窗经销有限公司 版权所有</span>
+      <span>高端系统门窗定制品牌 &middot; 始于2006</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<div class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</div>
+
+<!-- ============================================
+     JavaScript
+     ============================================ -->
+<script>
+(function() {
+  'use strict';
+
+  // ---- Navbar scroll effect ----
+  var navbar = document.getElementById('navbar');
+  var backToTop = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', function() {
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollY > 80) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+    if (scrollY > 600) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  });
+
+  // ---- Mobile Navigation ----
+  window.toggleNav = function() {
+    var navLinks = document.getElementById('navLinks');
+    var navToggle = document.getElementById('navToggle');
+    var navOverlay = document.getElementById('navOverlay');
+    navLinks.classList.toggle('open');
+    navToggle.classList.toggle('active');
+    navOverlay.classList.toggle('open');
+    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+  };
+
+  window.closeNav = function() {
+    var navLinks = document.getElementById('navLinks');
+    var navToggle = document.getElementById('navToggle');
+    var navOverlay = document.getElementById('navOverlay');
+    navLinks.classList.remove('open');
+    navToggle.classList.remove('active');
+    navOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  // ---- Product Series Tabs ----
+  window.switchSeries = function(seriesId, btn) {
+    // Deactivate all
+    var tabs = document.querySelectorAll('.product-tab');
+    var series = document.querySelectorAll('.product-series');
+    tabs.forEach(function(t) { t.classList.remove('active'); });
+    series.forEach(function(s) { s.classList.remove('active'); });
+
+    // Activate selected
+    btn.classList.add('active');
+    var target = document.getElementById('series-' + seriesId);
+    if (target) {
+      target.classList.add('active');
+      // Re-trigger reveal animations for cards in this series
+      var cards = target.querySelectorAll('.reveal');
+      cards.forEach(function(card) {
+        card.classList.remove('revealed');
+        void card.offsetWidth; // force reflow
+        card.classList.add('revealed');
+      });
+    }
+  };
+
+  // ---- Intersection Observer for Scroll Animations ----
+  var observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -60px 0px',
+    threshold: 0.1
+  };
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        // Don't unobserve so we can re-trigger if needed
+      }
+    });
+  }, observerOptions);
+
+  // Observe all reveal elements
+  var revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+  revealElements.forEach(function(el) {
+    observer.observe(el);
+  });
+
+  // ---- Performance Ring Animation ----
+  var ringObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        ringObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  var rings = document.querySelectorAll('.perf-ring');
+  rings.forEach(function(ring) {
+    ringObserver.observe(ring);
+  });
+
+  // ---- Count Up Animation ----
+  var countObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var target = parseInt(el.getAttribute('data-target'), 10);
+        var duration = 2000;
+        var startTime = null;
+
+        function animate(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          // Ease out cubic
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var current = Math.floor(eased * target);
+
+          if (target >= 10000) {
+            el.textContent = (current / 10000).toFixed(current >= target ? 0 : 0) + (current >= target ? '' : '');
+            if (target === 50000) {
+              el.textContent = Math.floor(current / 10000) + '万+';
+            } else if (target === 300000) {
+              el.textContent = Math.floor(current / 10000) + '万';
+            }
+          } else {
+            el.textContent = current;
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            if (target === 50000) el.textContent = '5万+';
+            else if (target === 300000) el.textContent = '30万';
+            else el.textContent = target;
+          }
+        }
+
+        requestAnimationFrame(animate);
+        countObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  var countElements = document.querySelectorAll('.count-up');
+  countElements.forEach(function(el) {
+    countObserver.observe(el);
+  });
+
+  // ---- Hero Particles ----
+  var particlesContainer = document.getElementById('particles');
+  if (particlesContainer) {
+    for (var i = 0; i < 30; i++) {
+      var particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.animationDuration = (8 + Math.random() * 12) + 's';
+      particle.style.animationDelay = Math.random() * 10 + 's';
+      particle.style.width = (1 + Math.random() * 2) + 'px';
+      particle.style.height = particle.style.width;
+      particle.style.opacity = (0.2 + Math.random() * 0.4).toString();
+      particlesContainer.appendChild(particle);
+    }
+  }
+
+  // ---- Smooth scroll for anchor links ----
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      var targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        var offset = navbar.offsetHeight;
+        var targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      }
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
